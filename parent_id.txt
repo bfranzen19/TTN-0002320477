@@ -1,0 +1,45 @@
+// id
+
+IF(NOT(ISBLANK(Internal_Service_Order__c)),
+  Internal_Service_Order__c,
+    IF(NOT(ISBLANK(CaseId)),
+      CaseId,
+        IF(NOT(ISBLANK(Service_Order__c)),
+          Service_Order__c,
+            IF(NOT(ISBLANK(Service_Order_Component__c)),
+              Service_Order_Component__c,
+                IF(NOT(ISBLANK(Asset__c)),
+                  Asset__c,
+                    IF(NOT(ISBLANK(Asset_Request__c)),
+                      Asset_Request__c,
+                        IF(NOT(ISBLANK(Real_Estate_Project__c)),
+                          Real_Estate_Project__c,
+                            IF(NOT(ISBLANK(Jeopardy__c)),
+                              Jeopardy__c,
+                                IF(NOT(ISBLANK(Build_Segment__c)),
+                                  Build_Segment__c,
+                                    IF(NOT(ISBLANK(Fiber_Span__c)),
+                                      Fiber_Span__c,
+                                        IF(NOT(ISBLANK(Location__c)),
+                                          Location__c,
+                                            IF(NOT(ISBLANK(Capital_Project__c)),
+                                              Capital_Project__c,
+                                                IF(NOT(ISBLANK(Capital_Subproject__c)),
+                                                  Capital_Subproject__c,
+                                                    IF(NOT(ISBLANK(Building__c)),
+                                                      Building__c,
+                                                        NULL
+                                                    )
+                                                )
+                                            )
+                                        )
+                                    )
+                                )
+                            )
+                        )
+                    )
+                )
+            )
+        )
+    )
+)
